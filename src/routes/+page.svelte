@@ -2,6 +2,10 @@
     export let data
     import header from '../assets/red_dhalia_04_lWN25vQmeU.jpeg'
 	import ProductPreview from '../components/ProductPreview.svelte';
+    import {isMenuOpen} from '$lib/controls'
+
+    $isMenuOpen = false
+
 </script>
 <div class="fade-in">
     <section class="flex flex-col h-screen">
