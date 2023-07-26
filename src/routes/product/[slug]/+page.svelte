@@ -3,6 +3,7 @@
     import { isMenuOpen } from '$lib/controls'
     export let data
 
+    $isMenuOpen = false
     let current_image = data.gallery[0]
     let dynamic_styles = 'hidden'
 
