@@ -78,17 +78,17 @@
                     <div class="flex flex-col w-3/4 h-max min-h-max justify-center overflow-hidden p-4" transition:slide|local>
                         <div class="flex flex-row w-full h-full gap-8">
                             <div class="h-32 w-52 overflow-hidden">
-                                <img src={item.img} loading="lazy" class="object-cover w-full h-full" alt="">
+                                <img src={item.img} loading="lazy" class="object-cover w-full h-full" alt={item.name}>
                             </div>
-                            <div class="flex flex-col w-max my-2 gap-1">
+                            <div class="flex flex-col w-max my-2 gap-1 self-center">
                                 <h6 class="text-">{item.name}</h6>
                                 <span class="text-xs font-semibold">{currency.format(item.price)}</span>
                                 <span class="text-xs">QTY: {item.qty}</span>
                                 <button class="text-xs mt-4 w-max" on:click={()=>{removeFromCart(item.name)}}>REMOVE</button>
                             </div>
-                            <div class="flex flex-row w-12 gap-4">
-                                <button class="text-gray-600 hover:text-black duration-200 ease-out-expo" on:click={()=>{incrementQty(index)}}><iconify-icon icon="simple-line-icons:plus" width="20px"></iconify-icon></button>
-                                <button class="text-gray-600 hover:text-black duration-200 ease-out-expo" on:click={()=>{decrementQty(index)}}><iconify-icon icon="simple-line-icons:minus" width="20px"></iconify-icon></button>
+                            <div class="flex flex-row w-max items-center justify-center p-1 gap-4">
+                                <button class="flex items-center text-gray-600 hover:text-black duration-200 ease-out-expo h-max" on:click={()=>{incrementQty(index)}}><iconify-icon icon="simple-line-icons:plus" width="20px"></iconify-icon></button>
+                                <button class="flex items-center text-gray-600 hover:text-black duration-200 ease-out-expo h-max" on:click={()=>{decrementQty(index)}}><iconify-icon icon="simple-line-icons:minus" width="20px"></iconify-icon></button>
                             </div>
                         </div>
                     </div>

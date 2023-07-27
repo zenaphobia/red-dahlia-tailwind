@@ -91,8 +91,10 @@
             <h1 class="text-2xl font-medium">{data.name}</h1>
             <p class="text-xs text-gray-500 border-2 border-gray-500 border-solid w-max p-1 px-2">{data.collection}</p>
         </div>
-        <div class="flex flex-row gap-2 text-gray-600">
-            <div class="flex flex-row">⋆⋆⋆⋆⋆</div>
+        <div class="flex flex-row items-center gap-2 text-gray-600">
+            {#each {length: 5} as icon }
+                <iconify-icon icon="material-symbols:star"></iconify-icon>
+            {/each}
             <span>-</span>
             <span>213 Reviews</span>
         </div>
