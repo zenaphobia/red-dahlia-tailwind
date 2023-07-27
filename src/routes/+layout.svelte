@@ -3,6 +3,7 @@
     import { shoppingCart } from "$lib/localStore";
     import { isMenuOpen } from '$lib/controls'
     import { slide } from 'svelte/transition';
+    import logo  from './../assets/rd-logo.svg'
 
     const currency = new Intl.NumberFormat('en-US', {
         style: 'currency',
@@ -59,7 +60,7 @@
 <header class="flex h-16 shadow-lg relative z-auto">
     <nav class="flex items-center w-full">
         <ul class="flex w-full flex-row justify-around items-center">
-            <li><a href="/">Home</a></li>
+            <li><a href="/"><img src={logo} class="w-20" alt="Red Dahlia Logo"></a></li>
             <li></li>
             <li class="flex w-max h-max hover:bg-gray-200 items-center p-2 rounded-full ease-in-out duration-150 hover:cursor-pointer" on:click={()=>{$isMenuOpen = true}}><a href="#" class="flex items-center text-gray-800 w-max"><iconify-icon icon="mdi:shopping" width="30px"></iconify-icon></a></li>
         </ul>
